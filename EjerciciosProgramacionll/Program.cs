@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 
 class EjerciosProgramacionll
@@ -119,32 +119,88 @@ class EjerciosProgramacionll
 
 		#endregion
 
-		#region Ejercicio 076
-		SortedList<string,string> dicci = new SortedList<string, string>();
-		dicci.Add("living room", "sala de estar");
-		dicci.Add("bathroom","baño");
-		dicci.Add("kitchen","cocina");
-		dicci.Add("study","sala de estudio");
-		dicci.Add("bedroom","dormitorio");
-		dicci.Add("laudryroom", "lavadero");
-		dicci.Add("garden","jardin");
+		#region Ejercicio 077
+		//SortedList<string, string> dicci = new SortedList<string, string>();
+		//dicci.Add("living room", "sala de estar");
+		//dicci.Add("bathroom", "baño");
+		//dicci.Add("kitchen", "cocina");
+		//dicci.Add("study", "sala de estudio");
+		//dicci.Add("bedroom", "dormitorio");
+		//dicci.Add("laudryroom", "lavadero");
+		//dicci.Add("garden", "jardin");
 
-		Console.WriteLine("Ingrese el nombre de la sala de la casa que desea traducir al español");
-		Console.WriteLine("");
-		string palabra = Console.ReadLine().ToLower();
+		//Console.WriteLine("Ingrese el nombre de la sala de la casa que desea traducir al español");
+		//Console.WriteLine("");
+		//string palabra = Console.ReadLine().ToLower();
 
-		if(dicci.ContainsKey(palabra))
-		{
-			string traducir = dicci [palabra];
-			Console.WriteLine($"{palabra} su tradiccion es {traducir}");
-		}
-		else
-		{
-			Console.WriteLine($"la palabra {palabra} no se encuentra");
-		}
+		//if (dicci.ContainsKey(palabra))
+		//{
+		//	string traducir = dicci[palabra];
+		//	Console.WriteLine($"{palabra} su tradiccion es {traducir}");
+		//}
+		//else
+		//{
+		//	Console.WriteLine($"la palabra {palabra} no se encuentra");
+		//}
 
 		#endregion
 
+		#region Ejercicio 078
+
+		//Dictionary<string, string> dicci = new Dictionary<string, string>();
+		//dicci.Add("living room", "sala de estar");
+		//dicci.Add("bathroom", "baño");
+		//dicci.Add("kitchen", "cocina");
+		//dicci.Add("study", "sala de estudio");
+		//dicci.Add("bedroom", "dormitorio");
+		//dicci.Add("laudryroom", "lavadero");
+		//dicci.Add("garden", "jardin");
+
+		//Console.WriteLine("nombre de salas");
+		//Console.WriteLine("");
+
+		//string palabra = Console.ReadLine().ToLower();
+
+
+		//string[] points = palabra.Split(',');
+
+		//foreach (var point in points)
+		//{
+		//	if (dicci.ContainsKey(point))
+		//	{
+		//		Console.WriteLine(point + " es " + dicci[point]);
+		//	}
+		//}
+		//Console.ReadLine();
+
+		#endregion
+
+		SortedSet<string> dicci = new SortedSet<string>();
+
+		while (true)
+		{
+			Console.WriteLine(" Introduci cosas para comprar ");
+			Console.WriteLine("");
+
+			string palabra = Console.ReadLine();
+			Console.WriteLine("");
+
+			if (palabra == "")
+			{
+				break;
+			}
+			if (!dicci.Contains(palabra))
+			{
+				dicci.Add(palabra);
+				Console.WriteLine("se agrego a la lista ");
+			}
+			else
+			{
+				Console.WriteLine("[" + palabra + "]" + "ya esta ");
+			}
+
+
+		}
 
 	}
 }
